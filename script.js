@@ -5,6 +5,7 @@
   send.addEventListener("click", function(){
     var newMessage = document.createElement("li");
     newMessage.innerHTML = text.value;
+    newMessage.textcolor = "white";
     messages.appendChild(newMessage);
     text.value = "";
   });

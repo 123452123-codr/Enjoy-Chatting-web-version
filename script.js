@@ -3,22 +3,15 @@
   var send = document.getElementById('send');
 
   send.addEventListener("click", function(){
-    var newMessage = document.createElement("li");
-    newMessage.innerHTML = text.value;
-    newMessage.textcolor = "white";
-    messages.appendChild(newMessage);
-    text.value = "";
-  });
-
-  text.addEventListener("keyup", function(event){
-    var key = event.which || event.keycode;
-    if(key == 13)
-    {
-      event.preventDefault();
-      
-      var newMessage = document.createElement("li");
-      newMessage.innerHTML = text.value;
-      messages.appendChild(newMessage);
+      var selfdiv = document.createElement("div");
+      selfdiv.classList.add('container');
+      var selfavatar = document.createElement("img");
+      selfavatar.src = ("Chat wallpaper.jpg");
+      selfavatar.alt = ("Avtar");
+      var selfmessage = document.createElement("p");
+      selfmessage.innerHTML = text.value;
+      selfdiv.appendChild(selfavatar);
+      selfdiv.appendChild(selfmessage);
+      message.appendChild(selfdiv);
       text.value = "";
-    }
   });
